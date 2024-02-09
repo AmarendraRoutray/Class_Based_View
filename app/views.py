@@ -58,3 +58,6 @@ class insertWhisky(FormView):
     def form_valid(self,form):
         form.save()
         return HttpResponse("Let's party..party...''Form_view''..")
+    
+    
+    
