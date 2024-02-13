@@ -1,0 +1,15 @@
+{% extends "app/base.html" %}
+
+{% block title %}
+<title>School List</title>
+{% endblock title %}
+
+{% block body %}
+
+    <h1>ListView</h1>
+
+    {% for school in schools %}
+        <a href="{{ school.pk }}"><h2>{{school.sname}}</h2></a>
+    {% endfor %}
+
+{% endblock %}

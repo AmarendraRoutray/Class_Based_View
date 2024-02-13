@@ -1,0 +1,23 @@
+{% extends "app/base.html" %}
+{% block title %}
+<title>School Details</title>
+{% endblock title %}
+
+
+{% block body %}
+
+<h1>School Detail</h1>
+
+<h3>Name : {{ sclobj.sname }}</h3>
+<h3>Pricipal : {{ sclobj.sprincipal }}</h3>
+<h3>Location : {{ sclobj.slocation }}</h3>
+
+<h1>Student Details</h1>
+    {% for stu in sclobj.students.all %}
+    <h3>Name : {{ stu.stuname }}</h3>
+    <h3>Age : {{ stu.stuage }}</h3>
+    <h3>School Name : {{ stu.sname }}</h3>
+    {% endfor %}
+    <a href="{% url 'SchoolUpdate' pk=sclobj.pk %}">Update</a>
+
+{% endblock body %}
